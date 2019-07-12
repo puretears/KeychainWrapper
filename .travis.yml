@@ -1,12 +1,11 @@
 os: osx
 language: swift
 osx_image: xcode11
-xcode_scheme: KeychainWrapper
-xcode_project: KeychainWrapper.xcodeproj
-xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone X
+env:
+- DESTINATION="OS=13.0,name=iPhone Xs" SCHEME="KeychainWrapper" SDK=iphonesimulator
 
 script:
-  - xcodebuild -scheme KeychainWrapper -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=13.0' test
+  xcodebuild -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test
 
 notifications:
   email:
