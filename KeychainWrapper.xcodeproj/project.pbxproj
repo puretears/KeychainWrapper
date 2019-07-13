@@ -18,6 +18,7 @@
 		68D0CD3C22D74DD600990B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD3A22D74DD600990B69 /* Main.storyboard */; };
 		68D0CD3E22D74DD800990B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD3D22D74DD800990B69 /* Assets.xcassets */; };
 		68D0CD4122D74DD800990B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD3F22D74DD800990B69 /* LaunchScreen.storyboard */; };
+		68D0CD4922D8FC6B00990B69 /* README.me in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD4822D8FC6B00990B69 /* README.me */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		68D0CD3D22D74DD800990B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68D0CD4022D74DD800990B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68D0CD4222D74DD800990B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68D0CD4822D8FC6B00990B69 /* README.me */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.me; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		68D0CD0522D4BC2A00990B69 = {
 			isa = PBXGroup;
 			children = (
+				68D0CD4822D8FC6B00990B69 /* README.me */,
 				68D0CD1122D4BC2A00990B69 /* KeychainWrapper */,
 				68D0CD1C22D4BC2A00990B69 /* KeychainWrapperTests */,
 				68D0CD3322D74DD600990B69 /* KeychainWrapperHostApp */,
@@ -253,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D0CD4922D8FC6B00990B69 /* README.me in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

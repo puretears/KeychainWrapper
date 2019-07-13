@@ -187,6 +187,10 @@ class KeychainWrapperTests: XCTestCase {
     XCTAssertEqual(accessibility, nil)
   }
   
+  func testAccessbilityForAttributeValue() {
+    XCTAssertEqual(KeychainItemAccessibility.accessbilityForAttributeValue("keyNotExist" as CFString), nil)
+  }
+  
   func testGetAllKeys() {
     do {
       try kcWrapper.set(intValue, forKey: intKey)
