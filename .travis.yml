@@ -3,10 +3,11 @@ language: swift
 osx_image: xcode11
 env:
 - DESTINATION="OS=13.0,name=iPhone Xs" SCHEME="KeychainWrapper" SDK=iphonesimulator CODECOV_TOKEN=d1a17022-d2e1-47d0-a3cb-da4681327fec
-
+dependencies:
+  pre:
+    - xcrun instruments -w 'iPhone Xs (13.0)' || sleep 15
 script:
   xcodebuild -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test
-
 after_success:
   - bash <(curl -s https://codecov.io/bash) -F KeychainWrapper
 notifications:
