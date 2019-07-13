@@ -8,7 +8,7 @@ script:
   xcodebuild -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -F KeychainWrapper
 notifications:
   email:
     - 11@boxue.io
