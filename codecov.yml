@@ -1,0 +1,14 @@
+coverage:
+  status:
+    project:
+      default: off
+      KeychainWrapper:
+        flags: KeychainWrapper
+        target: 100%
+
+flags:
+  # filter the folder(s) you wish to measure by that flag
+  KeychainWrapper:
+    # only include files in the backend folder
+    paths:
+      - KeychainWrapper/
