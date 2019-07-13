@@ -19,14 +19,12 @@ public enum KeychainItemAccessibility {
   @available(iOS 4, *)
   case afterFirstUnlockThisDeviceOnly
   
-  @available(iOS 4, *)
-  case always
+  ///`case always` was deprecated in iOS 12.0
   
   @available(iOS 8, *)
   case whenPasscodeSetThisDeviceOnly
   
-  @available(iOS 4, *)
-  case alwaysThisDeviceOnly
+  /// `case alwaysThisDeviceOnly` was deprecated in iOS 12.0
   
   /// The default case.
   @available(iOS 4, *)
@@ -57,9 +55,7 @@ extension KeychainItemAccessibility: KeychainAttrReprentable {
 private let keychainAccessibilityLookup: [KeychainItemAccessibility:CFString] = [
   .afterFirstUnlock              : kSecAttrAccessibleAfterFirstUnlock,
   .afterFirstUnlockThisDeviceOnly: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly,
-  .always                        : kSecAttrAccessibleAlways,
   .whenPasscodeSetThisDeviceOnly : kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly,
-  .alwaysThisDeviceOnly          : kSecAttrAccessibleAlwaysThisDeviceOnly,
   .whenUnlocked                  : kSecAttrAccessibleWhenUnlocked,
   .whenUnlockedThisDeviceOnly    : kSecAttrAccessibleWhenUnlockedThisDeviceOnly
 ]

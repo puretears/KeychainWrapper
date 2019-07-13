@@ -21,7 +21,10 @@ class KeychainWrapperTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
-    kcWrapper = KeychainWrapper(serviceName: "test.keychain.wrapper")
+    let appIdentifierPrefix = Bundle.main.infoDictionary!["AppIdentifierPrefix"] as! String
+    kcWrapper = KeychainWrapper(
+      serviceName: "test.keychain.wrapper",
+      accessGroup: "\(appIdentifierPrefix)io.boxue.KeychainWrapperHostApp.family")
   }
 
   override func tearDown() {

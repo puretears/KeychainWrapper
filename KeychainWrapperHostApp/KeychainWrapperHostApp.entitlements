@@ -3,6 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>keychain-access-groups</key>
-	<array/>
+	<array>
+		<string>$(AppIdentifierPrefix)io.boxue.KeychainWrapperHostApp.family</string>
+	</array>
 </dict>
 </plist>

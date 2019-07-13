@@ -7,21 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68BEDA1A22D9AD7500CA8AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEDA1922D9AD7500CA8AA7 /* AppDelegate.swift */; };
+		68BEDA1C22D9AD7500CA8AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEDA1B22D9AD7500CA8AA7 /* SceneDelegate.swift */; };
+		68BEDA1E22D9AD7500CA8AA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEDA1D22D9AD7500CA8AA7 /* ViewController.swift */; };
+		68BEDA2122D9AD7500CA8AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68BEDA1F22D9AD7500CA8AA7 /* Main.storyboard */; };
+		68BEDA2322D9AD7700CA8AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68BEDA2222D9AD7700CA8AA7 /* Assets.xcassets */; };
+		68BEDA2622D9AD7700CA8AA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68BEDA2422D9AD7700CA8AA7 /* LaunchScreen.storyboard */; };
 		68D0CD1922D4BC2A00990B69 /* KeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D0CD0F22D4BC2A00990B69 /* KeychainWrapper.framework */; };
 		68D0CD1E22D4BC2A00990B69 /* KeychainWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0CD1D22D4BC2A00990B69 /* KeychainWrapperTests.swift */; };
 		68D0CD2022D4BC2A00990B69 /* KeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D0CD1222D4BC2A00990B69 /* KeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		68D0CD2A22D4BC6A00990B69 /* KeychainItemAccesssibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0CD2922D4BC6A00990B69 /* KeychainItemAccesssibility.swift */; };
 		68D0CD2C22D4C3E900990B69 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0CD2B22D4C3E900990B69 /* KeychainWrapper.swift */; };
-		68D0CD3522D74DD600990B69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0CD3422D74DD600990B69 /* AppDelegate.swift */; };
-		68D0CD3722D74DD600990B69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0CD3622D74DD600990B69 /* SceneDelegate.swift */; };
-		68D0CD3922D74DD600990B69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0CD3822D74DD600990B69 /* ViewController.swift */; };
-		68D0CD3C22D74DD600990B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD3A22D74DD600990B69 /* Main.storyboard */; };
-		68D0CD3E22D74DD800990B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD3D22D74DD800990B69 /* Assets.xcassets */; };
-		68D0CD4122D74DD800990B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD3F22D74DD800990B69 /* LaunchScreen.storyboard */; };
 		68D0CD4922D8FC6B00990B69 /* README.me in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD4822D8FC6B00990B69 /* README.me */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		68BEDA2B22D9AD7C00CA8AA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68D0CD0622D4BC2A00990B69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68BEDA1622D9AD7500CA8AA7;
+			remoteInfo = KeychainWrapperHostApp;
+		};
 		68D0CD1A22D4BC2A00990B69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 68D0CD0622D4BC2A00990B69 /* Project object */;
@@ -29,16 +36,18 @@
 			remoteGlobalIDString = 68D0CD0E22D4BC2A00990B69;
 			remoteInfo = KeychainWrapper;
 		};
-		68D0CD4622D74DE800990B69 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68D0CD0622D4BC2A00990B69 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68D0CD3122D74DD600990B69;
-			remoteInfo = KeychainWrapperHostApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68BEDA1722D9AD7500CA8AA7 /* KeychainWrapperHostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainWrapperHostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68BEDA1922D9AD7500CA8AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		68BEDA1B22D9AD7500CA8AA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		68BEDA1D22D9AD7500CA8AA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		68BEDA2022D9AD7500CA8AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68BEDA2222D9AD7700CA8AA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68BEDA2522D9AD7700CA8AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		68BEDA2722D9AD7700CA8AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68BEDA2D22D9AD9D00CA8AA7 /* KeychainWrapperHostApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeychainWrapperHostApp.entitlements; sourceTree = "<group>"; };
 		68D0CD0F22D4BC2A00990B69 /* KeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D0CD1222D4BC2A00990B69 /* KeychainWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		68D0CD1322D4BC2A00990B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,18 +56,17 @@
 		68D0CD1F22D4BC2A00990B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68D0CD2922D4BC6A00990B69 /* KeychainItemAccesssibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccesssibility.swift; sourceTree = "<group>"; };
 		68D0CD2B22D4C3E900990B69 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
-		68D0CD3222D74DD600990B69 /* KeychainWrapperHostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainWrapperHostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		68D0CD3422D74DD600990B69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68D0CD3622D74DD600990B69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68D0CD3822D74DD600990B69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68D0CD3B22D74DD600990B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		68D0CD3D22D74DD800990B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		68D0CD4022D74DD800990B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		68D0CD4222D74DD800990B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68D0CD4822D8FC6B00990B69 /* README.me */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.me; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		68BEDA1422D9AD7500CA8AA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68D0CD0C22D4BC2A00990B69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,23 +82,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68D0CD2F22D74DD600990B69 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68BEDA1822D9AD7500CA8AA7 /* KeychainWrapperHostApp */ = {
+			isa = PBXGroup;
+			children = (
+				68BEDA2D22D9AD9D00CA8AA7 /* KeychainWrapperHostApp.entitlements */,
+				68BEDA1922D9AD7500CA8AA7 /* AppDelegate.swift */,
+				68BEDA1B22D9AD7500CA8AA7 /* SceneDelegate.swift */,
+				68BEDA1D22D9AD7500CA8AA7 /* ViewController.swift */,
+				68BEDA1F22D9AD7500CA8AA7 /* Main.storyboard */,
+				68BEDA2222D9AD7700CA8AA7 /* Assets.xcassets */,
+				68BEDA2422D9AD7700CA8AA7 /* LaunchScreen.storyboard */,
+				68BEDA2722D9AD7700CA8AA7 /* Info.plist */,
+			);
+			path = KeychainWrapperHostApp;
+			sourceTree = "<group>";
+		};
 		68D0CD0522D4BC2A00990B69 = {
 			isa = PBXGroup;
 			children = (
 				68D0CD4822D8FC6B00990B69 /* README.me */,
 				68D0CD1122D4BC2A00990B69 /* KeychainWrapper */,
 				68D0CD1C22D4BC2A00990B69 /* KeychainWrapperTests */,
-				68D0CD3322D74DD600990B69 /* KeychainWrapperHostApp */,
+				68BEDA1822D9AD7500CA8AA7 /* KeychainWrapperHostApp */,
 				68D0CD1022D4BC2A00990B69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +116,7 @@
 			children = (
 				68D0CD0F22D4BC2A00990B69 /* KeychainWrapper.framework */,
 				68D0CD1822D4BC2A00990B69 /* KeychainWrapperTests.xctest */,
-				68D0CD3222D74DD600990B69 /* KeychainWrapperHostApp.app */,
+				68BEDA1722D9AD7500CA8AA7 /* KeychainWrapperHostApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,20 +141,6 @@
 			path = KeychainWrapperTests;
 			sourceTree = "<group>";
 		};
-		68D0CD3322D74DD600990B69 /* KeychainWrapperHostApp */ = {
-			isa = PBXGroup;
-			children = (
-				68D0CD3422D74DD600990B69 /* AppDelegate.swift */,
-				68D0CD3622D74DD600990B69 /* SceneDelegate.swift */,
-				68D0CD3822D74DD600990B69 /* ViewController.swift */,
-				68D0CD3A22D74DD600990B69 /* Main.storyboard */,
-				68D0CD3D22D74DD800990B69 /* Assets.xcassets */,
-				68D0CD3F22D74DD800990B69 /* LaunchScreen.storyboard */,
-				68D0CD4222D74DD800990B69 /* Info.plist */,
-			);
-			path = KeychainWrapperHostApp;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -153,6 +155,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		68BEDA1622D9AD7500CA8AA7 /* KeychainWrapperHostApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68BEDA2822D9AD7700CA8AA7 /* Build configuration list for PBXNativeTarget "KeychainWrapperHostApp" */;
+			buildPhases = (
+				68BEDA1322D9AD7500CA8AA7 /* Sources */,
+				68BEDA1422D9AD7500CA8AA7 /* Frameworks */,
+				68BEDA1522D9AD7500CA8AA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainWrapperHostApp;
+			productName = KeychainWrapperHostApp;
+			productReference = 68BEDA1722D9AD7500CA8AA7 /* KeychainWrapperHostApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		68D0CD0E22D4BC2A00990B69 /* KeychainWrapper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68D0CD2322D4BC2A00990B69 /* Build configuration list for PBXNativeTarget "KeychainWrapper" */;
@@ -184,29 +203,12 @@
 			);
 			dependencies = (
 				68D0CD1B22D4BC2A00990B69 /* PBXTargetDependency */,
-				68D0CD4722D74DE800990B69 /* PBXTargetDependency */,
+				68BEDA2C22D9AD7C00CA8AA7 /* PBXTargetDependency */,
 			);
 			name = KeychainWrapperTests;
 			productName = KeychainWrapperTests;
 			productReference = 68D0CD1822D4BC2A00990B69 /* KeychainWrapperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		68D0CD3122D74DD600990B69 /* KeychainWrapperHostApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68D0CD4322D74DD800990B69 /* Build configuration list for PBXNativeTarget "KeychainWrapperHostApp" */;
-			buildPhases = (
-				68D0CD2E22D74DD600990B69 /* Sources */,
-				68D0CD2F22D74DD600990B69 /* Frameworks */,
-				68D0CD3022D74DD600990B69 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = KeychainWrapperHostApp;
-			productName = KeychainWrapperHostApp;
-			productReference = 68D0CD3222D74DD600990B69 /* KeychainWrapperHostApp.app */;
-			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -218,16 +220,16 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = Mars;
 				TargetAttributes = {
+					68BEDA1622D9AD7500CA8AA7 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					68D0CD0E22D4BC2A00990B69 = {
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
 					};
 					68D0CD1722D4BC2A00990B69 = {
 						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 68D0CD3122D74DD600990B69;
-					};
-					68D0CD3122D74DD600990B69 = {
-						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 68BEDA1622D9AD7500CA8AA7;
 					};
 				};
 			};
@@ -246,12 +248,22 @@
 			targets = (
 				68D0CD0E22D4BC2A00990B69 /* KeychainWrapper */,
 				68D0CD1722D4BC2A00990B69 /* KeychainWrapperTests */,
-				68D0CD3122D74DD600990B69 /* KeychainWrapperHostApp */,
+				68BEDA1622D9AD7500CA8AA7 /* KeychainWrapperHostApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		68BEDA1522D9AD7500CA8AA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68BEDA2622D9AD7700CA8AA7 /* LaunchScreen.storyboard in Resources */,
+				68BEDA2322D9AD7700CA8AA7 /* Assets.xcassets in Resources */,
+				68BEDA2122D9AD7500CA8AA7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68D0CD0D22D4BC2A00990B69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,16 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68D0CD3022D74DD600990B69 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68D0CD4122D74DD800990B69 /* LaunchScreen.storyboard in Resources */,
-				68D0CD3E22D74DD800990B69 /* Assets.xcassets in Resources */,
-				68D0CD3C22D74DD600990B69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +302,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		68BEDA1322D9AD7500CA8AA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68BEDA1E22D9AD7500CA8AA7 /* ViewController.swift in Sources */,
+				68BEDA1A22D9AD7500CA8AA7 /* AppDelegate.swift in Sources */,
+				68BEDA1C22D9AD7500CA8AA7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68D0CD0B22D4BC2A00990B69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,44 +329,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68D0CD2E22D74DD600990B69 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68D0CD3922D74DD600990B69 /* ViewController.swift in Sources */,
-				68D0CD3522D74DD600990B69 /* AppDelegate.swift in Sources */,
-				68D0CD3722D74DD600990B69 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		68BEDA2C22D9AD7C00CA8AA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68BEDA1622D9AD7500CA8AA7 /* KeychainWrapperHostApp */;
+			targetProxy = 68BEDA2B22D9AD7C00CA8AA7 /* PBXContainerItemProxy */;
+		};
 		68D0CD1B22D4BC2A00990B69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 68D0CD0E22D4BC2A00990B69 /* KeychainWrapper */;
 			targetProxy = 68D0CD1A22D4BC2A00990B69 /* PBXContainerItemProxy */;
 		};
-		68D0CD4722D74DE800990B69 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68D0CD3122D74DD600990B69 /* KeychainWrapperHostApp */;
-			targetProxy = 68D0CD4622D74DE800990B69 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		68D0CD3A22D74DD600990B69 /* Main.storyboard */ = {
+		68BEDA1F22D9AD7500CA8AA7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				68D0CD3B22D74DD600990B69 /* Base */,
+				68BEDA2022D9AD7500CA8AA7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		68D0CD3F22D74DD800990B69 /* LaunchScreen.storyboard */ = {
+		68BEDA2422D9AD7700CA8AA7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				68D0CD4022D74DD800990B69 /* Base */,
+				68BEDA2522D9AD7700CA8AA7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -362,6 +364,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		68BEDA2922D9AD7700CA8AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeychainWrapperHostApp/KeychainWrapperHostApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9DJEBF62S3;
+				INFOPLIST_FILE = KeychainWrapperHostApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.boxue.KeychainWrapperHostApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68BEDA2A22D9AD7700CA8AA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeychainWrapperHostApp/KeychainWrapperHostApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9DJEBF62S3;
+				INFOPLIST_FILE = KeychainWrapperHostApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.boxue.KeychainWrapperHostApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		68D0CD2122D4BC2A00990B69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -494,7 +536,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KeychainWrapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,6 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.boxue.KeychainWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_UIKITFORMAC = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -521,7 +564,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KeychainWrapper/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,6 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.boxue.KeychainWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_UIKITFORMAC = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -540,6 +584,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DJEBF62S3;
 				INFOPLIST_FILE = KeychainWrapperTests/Info.plist;
@@ -550,6 +595,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.boxue.KeychainWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainWrapperHostApp.app/KeychainWrapperHostApp";
@@ -561,6 +607,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DJEBF62S3;
 				INFOPLIST_FILE = KeychainWrapperTests/Info.plist;
@@ -571,51 +618,25 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.boxue.KeychainWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainWrapperHostApp.app/KeychainWrapperHostApp";
 			};
 			name = Release;
 		};
-		68D0CD4422D74DD800990B69 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9DJEBF62S3;
-				INFOPLIST_FILE = KeychainWrapperHostApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.boxue.KeychainWrapperHostApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		68D0CD4522D74DD800990B69 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9DJEBF62S3;
-				INFOPLIST_FILE = KeychainWrapperHostApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.boxue.KeychainWrapperHostApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		68BEDA2822D9AD7700CA8AA7 /* Build configuration list for PBXNativeTarget "KeychainWrapperHostApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68BEDA2922D9AD7700CA8AA7 /* Debug */,
+				68BEDA2A22D9AD7700CA8AA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		68D0CD0922D4BC2A00990B69 /* Build configuration list for PBXProject "KeychainWrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -639,15 +660,6 @@
 			buildConfigurations = (
 				68D0CD2722D4BC2A00990B69 /* Debug */,
 				68D0CD2822D4BC2A00990B69 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		68D0CD4322D74DD800990B69 /* Build configuration list for PBXNativeTarget "KeychainWrapperHostApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68D0CD4422D74DD800990B69 /* Debug */,
-				68D0CD4522D74DD800990B69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
