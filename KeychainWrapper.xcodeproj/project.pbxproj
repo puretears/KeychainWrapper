@@ -197,7 +197,6 @@
 				68D0CD1422D4BC2A00990B69 /* Sources */,
 				68D0CD1522D4BC2A00990B69 /* Frameworks */,
 				68D0CD1622D4BC2A00990B69 /* Resources */,
-				68D0CD2D22D7469B00990B69 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -280,26 +279,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		68D0CD2D22D7469B00990B69 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncodesign --verify --force --sign \"$CODE_SIGN_IDENTITY\" \"$CODESIGNING_FOLDER_PATH\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68BEDA1322D9AD7500CA8AA7 /* Sources */ = {
