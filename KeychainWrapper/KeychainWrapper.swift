@@ -9,16 +9,16 @@
 import Foundation
 
 /// Keychain service attributes
-private let SecMatchLimit         : String = kSecMatchLimit          as String
-private let SecReturnData         : String = kSecReturnData          as String
-private let SecValueData          : String = kSecValueData           as String
-private let SecAttrAccessible     : String = kSecAttrAccessible      as String
-private let SecClass              : String = kSecClass               as String
-private let SecAttrService        : String = kSecAttrService         as String
-private let SecAttrGeneric        : String = kSecAttrGeneric         as String
-private let SecAttrAccount        : String = kSecAttrAccount         as String
-private let SecAttrAccessGroup    : String = kSecAttrAccessGroup     as String
-private let SecReturnAttributes   : String = kSecReturnAttributes    as String
+private let secMatchLimit         : String = kSecMatchLimit          as String
+private let secReturnData         : String = kSecReturnData          as String
+private let secValueData          : String = kSecValueData           as String
+private let secAttrAccessible     : String = kSecAttrAccessible      as String
+private let secClass              : String = kSecClass               as String
+private let secAttrService        : String = kSecAttrService         as String
+private let secAttrGeneric        : String = kSecAttrGeneric         as String
+private let secAttrAccount        : String = kSecAttrAccount         as String
+private let secAttrAccessGroup    : String = kSecAttrAccessGroup     as String
+private let secReturnAttributes   : String = kSecReturnAttributes    as String
 
 open class KeychainWrapper {
   /// Singleton
@@ -65,15 +65,15 @@ open class KeychainWrapper {
   
   open func accessibilityOfKey(_ key: String) -> KeychainItemAccessibility? {
     var queryDictionary = setupQueryDictionary(forKey: key)
-    queryDictionary[SecMatchLimit] = kSecMatchLimitOne
-    queryDictionary[SecReturnAttributes] = kCFBooleanTrue
+    queryDictionary[secMatchLimit] = kSecMatchLimitOne
+    queryDictionary[secReturnAttributes] = kCFBooleanTrue
     
     var results: AnyObject?
     let status = SecItemCopyMatching(queryDictionary as CFDictionary, &results)
     
     guard status == errSecSuccess,
       let dictionary = results as? [String: AnyObject],
-      let accessibility = dictionary[SecAttrAccessible] as? String
+      let accessibility = dictionary[secAttrAccessible] as? String
       else {
         return nil
     }
@@ -84,14 +84,14 @@ open class KeychainWrapper {
   /// Get the keys of all keychain entries matching the current `serviceName` and `accessGroup`.
   open func allKeys() -> Set<String> {
     var queryDictionary: [String: Any] = [
-      SecClass: kSecClassGenericPassword,
-      SecAttrService: serviceName,
-      SecReturnAttributes: kCFBooleanTrue!,
-      SecMatchLimit: kSecMatchLimitAll
+      secClass: kSecClassGenericPassword,
+      secAttrService: serviceName,
+      secReturnAttributes: kCFBooleanTrue!,
+      secMatchLimit: kSecMatchLimitAll
     ]
     
     if let accessGroup = accessGroup {
-      queryDictionary[SecAttrAccessGroup] = accessGroup
+      queryDictionary[secAttrAccessGroup] = accessGroup
     }
     
     var results: AnyObject?
@@ -103,7 +103,7 @@ open class KeychainWrapper {
     
     if let results = results as? [[AnyHashable: Any]] {
       for attributes in results {
-        if let accountData = attributes[SecAttrAccount] as? Data,
+        if let accountData = attributes[secAttrAccount] as? Data,
           let key = String(data: accountData, encoding: .utf8) {
           keys.insert(key)
         }
@@ -175,10 +175,10 @@ open class KeychainWrapper {
     var queryDictionary = setupQueryDictionary(forKey: key, withAccessibility: accessibility)
     
     // Limit result to 1
-    queryDictionary[SecMatchLimit] = kSecMatchLimitOne
+    queryDictionary[secMatchLimit] = kSecMatchLimitOne
     
     // Specify we want persistant data reference
-    queryDictionary[SecReturnData] = kCFBooleanTrue
+    queryDictionary[secReturnData] = kCFBooleanTrue
     
     // Search
     var result: AnyObject?
@@ -253,11 +253,11 @@ open class KeychainWrapper {
     forKey key: String,
     withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool {
     var queryDictionary: [String: Any] = setupQueryDictionary(forKey: key, withAccessibility: accessibility)
-    queryDictionary[SecValueData] = value
+    queryDictionary[secValueData] = value
     
     if accessibility == nil {
       // Default protection level. The data is only valid when the device is unlocked.
-      queryDictionary[SecAttrAccessible] = KeychainItemAccessibility.whenUnlocked.keychainAttrValue
+      queryDictionary[secAttrAccessible] = KeychainItemAccessibility.whenUnlocked.keychainAttrValue
     }
     
     let status = SecItemAdd(queryDictionary as CFDictionary, nil)
@@ -290,11 +290,11 @@ open class KeychainWrapper {
   
   /// Remove all keychain data added through the keychain wrapper.
   @discardableResult open func removeAllKeys() -> Bool {
-    var queryDictionary: [String: Any] = [SecClass: kSecClassGenericPassword]
-    queryDictionary[SecAttrService] = serviceName
+    var queryDictionary: [String: Any] = [secClass: kSecClassGenericPassword]
+    queryDictionary[secAttrService] = serviceName
     
     if let accessGroup = accessGroup {
-      queryDictionary[SecAttrAccessGroup] = accessGroup
+      queryDictionary[secAttrAccessGroup] = accessGroup
     }
     
     let status = SecItemDelete(queryDictionary as CFDictionary)
@@ -319,8 +319,8 @@ open class KeychainWrapper {
   
   /// Remove all items for a given keychain item class.
   @discardableResult private class func deleteKeychainSecClass(
-    _ secClass: AnyObject) -> Bool {
-    let queryDictionary = [SecClass: secClass]
+    _ destSecClass: AnyObject) -> Bool {
+    let queryDictionary = [secClass: destSecClass]
     let status = SecItemDelete(queryDictionary as CFDictionary)
     
     return (status == errSecSuccess)
@@ -333,7 +333,7 @@ open class KeychainWrapper {
     withAccessibility accessbility: KeychainItemAccessibility? = nil) -> Bool {
     let queryDictionary = setupQueryDictionary(
       forKey: key, withAccessibility: accessbility)
-    let updateDictionary = [SecValueData: value]
+    let updateDictionary = [secValueData: value]
     
     let status = SecItemUpdate(
       queryDictionary as CFDictionary, updateDictionary as CFDictionary)
@@ -350,21 +350,21 @@ open class KeychainWrapper {
   private func setupQueryDictionary(
     forKey key: String,
     withAccessibility accessibility: KeychainItemAccessibility? = nil) -> [String: Any] {
-    var queryDictionary: [String: Any] = [SecClass: kSecClassGenericPassword]
-    queryDictionary[SecAttrService] = serviceName
+    var queryDictionary: [String: Any] = [secClass: kSecClassGenericPassword]
+    queryDictionary[secAttrService] = serviceName
     
     if let accessibility = accessibility {
-      queryDictionary[SecAttrAccessible] = accessibility.keychainAttrValue
+      queryDictionary[secAttrAccessible] = accessibility.keychainAttrValue
     }
     
     if let accessGroup = accessGroup {
-      queryDictionary[SecAttrAccessGroup] = accessGroup
+      queryDictionary[secAttrAccessGroup] = accessGroup
     }
     
     let encodedKey = key.data(using: .utf8)
     
-    queryDictionary[SecAttrGeneric] = encodedKey
-    queryDictionary[SecAttrAccount] = encodedKey
+    queryDictionary[secAttrGeneric] = encodedKey
+    queryDictionary[secAttrAccount] = encodedKey
     
     return queryDictionary
   }
