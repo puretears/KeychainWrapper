@@ -18,7 +18,7 @@
 		68D0CD2022D4BC2A00990B69 /* KeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D0CD1222D4BC2A00990B69 /* KeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		68D0CD2A22D4BC6A00990B69 /* KeychainItemAccesssibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0CD2922D4BC6A00990B69 /* KeychainItemAccesssibility.swift */; };
 		68D0CD2C22D4C3E900990B69 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D0CD2B22D4C3E900990B69 /* KeychainWrapper.swift */; };
-		68D0CD4922D8FC6B00990B69 /* README.me in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD4822D8FC6B00990B69 /* README.me */; };
+		68D0CD4922D8FC6B00990B69 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 68D0CD4822D8FC6B00990B69 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		68D0CD1F22D4BC2A00990B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68D0CD2922D4BC6A00990B69 /* KeychainItemAccesssibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccesssibility.swift; sourceTree = "<group>"; };
 		68D0CD2B22D4C3E900990B69 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
-		68D0CD4822D8FC6B00990B69 /* README.me */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.me; sourceTree = "<group>"; };
+		68D0CD4822D8FC6B00990B69 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 		68D0CD0522D4BC2A00990B69 = {
 			isa = PBXGroup;
 			children = (
-				68D0CD4822D8FC6B00990B69 /* README.me */,
+				68D0CD4822D8FC6B00990B69 /* README.md */,
 				68D0CD1122D4BC2A00990B69 /* KeychainWrapper */,
 				68D0CD1C22D4BC2A00990B69 /* KeychainWrapperTests */,
 				68BEDA1822D9AD7500CA8AA7 /* KeychainWrapperHostApp */,
@@ -267,7 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68D0CD4922D8FC6B00990B69 /* README.me in Resources */,
+				68D0CD4922D8FC6B00990B69 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
