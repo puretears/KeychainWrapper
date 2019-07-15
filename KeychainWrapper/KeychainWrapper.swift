@@ -123,12 +123,12 @@ open class KeychainWrapper {
   open func object<T>(
     of type: T.Type,
     forKey key: String,
-    withAccessibility accessibility: KeychainItemAccessibility? = nil) throws -> T? where T:Decodable {
+    withAccessibility accessibility: KeychainItemAccessibility? = nil) -> T? where T:Decodable {
     guard let data = data(forKey: key, withAccessibility: accessibility) else {
       return nil
     }
     
-    return try JSONDecoder().decode(T.self, from: data)
+    return try? JSONDecoder().decode(T.self, from: data)
   }
   
   
@@ -140,13 +140,13 @@ open class KeychainWrapper {
   open func object<T>(
     of type: T.Type,
     forKey key: String,
-    withAccessibility accessibility: KeychainItemAccessibility? = nil) throws -> T?
+    withAccessibility accessibility: KeychainItemAccessibility? = nil) -> T?
     where  T:Numeric, T:Decodable {
     guard let data = data(forKey: key, withAccessibility: accessibility) else {
       return nil
     }
     
-    return try JSONDecoder().decode([T].self, from: data)[0]
+    return try? JSONDecoder().decode([T].self, from: data)[0]
   }
   
   /// Returns a string for a specified key.
@@ -199,8 +199,8 @@ open class KeychainWrapper {
   @discardableResult open func set<T>(
     _ value: T,
     forKey key: String,
-    withAccessibility accessibility: KeychainItemAccessibility? = nil) throws -> Bool where T:Encodable {
-    let data = try JSONEncoder().encode(value)
+    withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool where T:Encodable {
+    guard let data = try? JSONEncoder().encode(value) else { return false }
     
     return set(data, forKey: key, withAccessibility: accessibility)
   }
@@ -215,9 +215,9 @@ open class KeychainWrapper {
   @discardableResult open func set<T>(
     _ value: T,
     forKey key: String,
-    withAccessibility accessibility: KeychainItemAccessibility? = nil) throws -> Bool
+    withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool
     where T:Numeric, T:Encodable {
-    let data = try JSONEncoder().encode([value])
+    guard let data = try? JSONEncoder().encode([value]) else { return false }
     
     return set(data, forKey: key, withAccessibility: accessibility)
   }
@@ -233,12 +233,9 @@ open class KeychainWrapper {
     _ value: String,
     forKey key: String,
     withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool {
-    if let data = value.data(using: .utf8) {
-      return set(data, forKey: key, withAccessibility: accessibility)
-    }
-    else {
-      return false
-    }
+    guard let data = value.data(using: .utf8) else { return false }
+    
+    return set(data, forKey: key, withAccessibility: accessibility)
   }
   
   /// Save a `Data` associated with a specific key. If the key already exists, the

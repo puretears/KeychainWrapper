@@ -59,78 +59,53 @@ class KeychainWrapperTests: XCTestCase {
   }
   
   func testSetInt() {
-    do {
-      guard try kcWrapper.set(intValue, forKey: intKey) else {
-        XCTFail("Set value of: \(intValue) for key: \(intKey) failed.")
-        return
-      }
-    }
-    catch (let e) {
-      XCTFail("Set value of: \(intValue) for key: \(intKey) failed.\nReason: \(e.localizedDescription)")
+    guard kcWrapper.set(intValue, forKey: intKey) else {
+      XCTFail("Set value of: \(intValue) for key: \(intKey) failed.")
+      return
     }
   }
   
   func testReadInt() {
-    do {
-      try kcWrapper.set(intValue, forKey: intKey)
-      let result = try kcWrapper.object(of: Int.self, forKey: intKey)
-      
-      if result != intValue {
-        XCTFail("Fetch the wrong int value of key:\(intKey).\n\(intValue) is expected.")
-      }
-    }
-    catch (let e) {
-      XCTFail("Fetch int value of key:\(intKey) failed.\nReason: \(e.localizedDescription)")
+    kcWrapper.set(intValue, forKey: intKey)
+    let result = kcWrapper.object(of: Int.self, forKey: intKey)
+    
+    if result != intValue {
+      XCTFail("Fetch the wrong int value of key:\(intKey).\n\(intValue) is expected.")
     }
   }
   
   func testReadInvalidInt() {
-    let result = try? kcWrapper.object(of: Int.self, forKey: intKey)
+    let result = kcWrapper.object(of: Int.self, forKey: intKey)
     XCTAssertEqual(result, nil)
   }
   
   func testUpdateExistingInt() {
-    do {
-      try! kcWrapper.set(intValue, forKey: intKey)
-      try! kcWrapper.set(4, forKey: intKey)
-      let four = try kcWrapper.object(of: Int.self, forKey: intKey)
-      
-      XCTAssert(four == 4, "Update value of: \(4) for key: \(intKey) failed.")
-    }
-    catch (let e) {
-      XCTFail("Update value of: \(4) for key: \(intKey) failed.\nReason: \(e.localizedDescription)")
-    }
+    kcWrapper.set(intValue, forKey: intKey)
+    kcWrapper.set(4, forKey: intKey)
+    let four = kcWrapper.object(of: Int.self, forKey: intKey)
+    
+    XCTAssert(four == 4, "Update value of: \(4) for key: \(intKey) failed.")
   }
   
   // Test setting and reading Array (a type conforms to Codable only)
   func testSetArray() {
-    do {
-      guard try kcWrapper.set(arrayValue, forKey: arrayKey) else {
-        XCTFail("Set value of: \(arrayValue) for key: \(arrayKey) failed.")
-        return
-      }
-    }
-    catch (let e) {
-      XCTFail("Set value of: \(arrayValue) for key: \(arrayKey) failed.\nReason: \(e.localizedDescription)")
+    guard kcWrapper.set(arrayValue, forKey: arrayKey) else {
+      XCTFail("Set value of: \(arrayValue) for key: \(arrayKey) failed.")
+      return
     }
   }
   
   func testReadArray() {
-    do {
-      try kcWrapper.set(arrayValue, forKey: arrayKey)
-      let result = try kcWrapper.object(of: Array<Int>.self, forKey: arrayKey)
-      
-      if result != arrayValue {
-        XCTFail("Fetch the wrong array value of key:\(arrayKey).\n\(arrayValue) is expected.")
-      }
-    }
-    catch (let e) {
-      XCTFail("Fetch int value of key:\(arrayKey) failed.\nReason: \(e.localizedDescription)")
+    kcWrapper.set(arrayValue, forKey: arrayKey)
+    let result = kcWrapper.object(of: Array<Int>.self, forKey: arrayKey)
+    
+    if result != arrayValue {
+      XCTFail("Fetch the wrong array value of key:\(arrayKey).\n\(arrayValue) is expected.")
     }
   }
   
   func testReadInvalidArray() {
-    let result = try? kcWrapper.object(of: Array<Int>.self, forKey: arrayKey)
+    let result = kcWrapper.object(of: Array<Int>.self, forKey: arrayKey)
     XCTAssertEqual(result, nil)
   }
   
@@ -140,48 +115,33 @@ class KeychainWrapperTests: XCTestCase {
   }
   
   func testHasValue() {
-    do {
-      try kcWrapper.set(intValue, forKey: intKey)
-      let result = kcWrapper.hasValue(forKey: intKey)
-      
-      XCTAssert(result, "\(intKey) should exists.")
-    }
-    catch (let e) {
-      XCTFail("Set value of: \(intValue) for key: \(intKey) failed.\nReason: \(e.localizedDescription)")
-    }
+    kcWrapper.set(intValue, forKey: intKey)
+    let result = kcWrapper.hasValue(forKey: intKey)
+    
+    XCTAssert(result, "\(intKey) should exists.")
   }
   
   func testGetDefaultAccessibilityOfKey() {
-    do {
-      try kcWrapper.set(intValue, forKey: intKey)
-      let accessibility = kcWrapper.accessibilityOfKey(intKey)
-      
-      if accessibility == nil {
-        XCTFail("Get accessibility of key:\(intKey) failed.")
-      }
-      else if accessibility != KeychainItemAccessibility.whenUnlocked {
-        XCTFail("Wrong accessibility of key:\(intKey) failed. whenUnlocked was expected.")
-      }
+    kcWrapper.set(intValue, forKey: intKey)
+    let accessibility = kcWrapper.accessibilityOfKey(intKey)
+    
+    if accessibility == nil {
+      XCTFail("Get accessibility of key:\(intKey) failed.")
     }
-    catch (let e) {
-      XCTFail("Set value of: \(intValue) for key: \(intKey) failed.\nReason: \(e.localizedDescription)")
+    else if accessibility != KeychainItemAccessibility.whenUnlocked {
+      XCTFail("Wrong accessibility of key:\(intKey) failed. whenUnlocked was expected.")
     }
   }
   
   func testGetAccessibilityOfKey() {
-    do {
-      try kcWrapper.set(intValue, forKey: intKey, withAccessibility: .afterFirstUnlock)
-      let accessibility = kcWrapper.accessibilityOfKey(intKey)
-      
-      if accessibility == nil {
-        XCTFail("Get accessibility of key:\(intKey) failed.")
-      }
-      else if accessibility != KeychainItemAccessibility.afterFirstUnlock {
-        XCTFail("Wrong accessibility of key:\(intKey) failed. afterFirstUnlock was expected.")
-      }
+    kcWrapper.set(intValue, forKey: intKey, withAccessibility: .afterFirstUnlock)
+    let accessibility = kcWrapper.accessibilityOfKey(intKey)
+    
+    if accessibility == nil {
+      XCTFail("Get accessibility of key:\(intKey) failed.")
     }
-    catch (let e) {
-      XCTFail("Set value of: \(intValue) for key: \(intKey) failed.\nReason: \(e.localizedDescription)")
+    else if accessibility != KeychainItemAccessibility.afterFirstUnlock {
+      XCTFail("Wrong accessibility of key:\(intKey) failed. afterFirstUnlock was expected.")
     }
   }
   
@@ -195,18 +155,13 @@ class KeychainWrapperTests: XCTestCase {
   }
   
   func testGetAllKeys() {
-    do {
-      try kcWrapper.set(intValue, forKey: intKey)
-      kcWrapper.set(stringValue, forKey: stringKey)
-      try kcWrapper.set(arrayValue, forKey: arrayKey)
-      let keySet = kcWrapper.allKeys()
-      let expected: Set<String> = [intKey, stringKey, arrayKey]
-      
-      XCTAssertEqual(keySet, expected)
-    }
-    catch (let e) {
-      XCTFail("Set value of key failed.\nReason: \(e.localizedDescription)")
-    }
+    kcWrapper.set(intValue, forKey: intKey)
+    kcWrapper.set(stringValue, forKey: stringKey)
+    kcWrapper.set(arrayValue, forKey: arrayKey)
+    let keySet = kcWrapper.allKeys()
+    let expected: Set<String> = [intKey, stringKey, arrayKey]
+    
+    XCTAssertEqual(keySet, expected)
   }
   
   func testEmptyKeys() {
@@ -215,35 +170,24 @@ class KeychainWrapperTests: XCTestCase {
   }
   
   func testRemoveObject() {
-    do {
-      try kcWrapper.set(intValue, forKey: intKey)
-      let isRemoved = kcWrapper.removeObject(forKey: intKey)
-      
-      XCTAssert(isRemoved, "Remove item for key:\(intKey) failed.")
-      
-    }
-    catch (let e) {
-      XCTFail("Set value of key failed.\nReason: \(e.localizedDescription)")
-    }
+    kcWrapper.set(intValue, forKey: intKey)
+    let isRemoved = kcWrapper.removeObject(forKey: intKey)
+    
+    XCTAssert(isRemoved, "Remove item for key:\(intKey) failed.")
   }
   
   func testRemoveAllKeys() {
-    do {
-      kcWrapper.set(stringValue, forKey: stringKey)
-      try kcWrapper.set(intValue, forKey: intKey)
-      try kcWrapper.set(arrayValue, forKey: arrayKey)
-      
-      let isRemoved = kcWrapper.removeAllKeys()
-      let noIntValue = !kcWrapper.hasValue(forKey: intKey)
-      let noStringValue = !kcWrapper.hasValue(forKey: stringKey)
-      let noArrayValue = !kcWrapper.hasValue(forKey: arrayKey)
-      let result = isRemoved && noIntValue && noStringValue && noArrayValue
-      
-      XCTAssert(result, "Some keys still have values.")
-    }
-    catch (let e) {
-      XCTFail("Set value of keychain item failed.\nReason: \(e.localizedDescription)")
-    }
+    kcWrapper.set(stringValue, forKey: stringKey)
+    kcWrapper.set(intValue, forKey: intKey)
+    kcWrapper.set(arrayValue, forKey: arrayKey)
+    
+    let isRemoved = kcWrapper.removeAllKeys()
+    let noIntValue = !kcWrapper.hasValue(forKey: intKey)
+    let noStringValue = !kcWrapper.hasValue(forKey: stringKey)
+    let noArrayValue = !kcWrapper.hasValue(forKey: arrayKey)
+    let result = isRemoved && noIntValue && noStringValue && noArrayValue
+    
+    XCTAssert(result, "Some keys still have values.")
   }
   
   func testWipeKeychain() {
