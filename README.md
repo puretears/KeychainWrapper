@@ -15,7 +15,7 @@
 </a>
 </p>
 
-KeychainWrapper is a light weight swift wrapper for iOS keychain. Makes accessing keychain is exetremely simple as `UserDefaults`.
+KeychainWrapper is a light weight swift wrapper for iOS keychain. Makes accessing keychain is exetremely simple as `UserDefaults`. It is motivated by creating the app of [boxueio.com](https://boxueio.com).
 
 ## Features
 
@@ -52,7 +52,18 @@ Remove data from keychain. Return `Bool` indicating if the delete was successful
 KeychainWrapper.default.removeObject(forKey: "key.to.be.deleted")
 ```
 
-### Customization
+## Customization
+
+### Default values
+
+
+
+### Service name and access group
+
+
+
+### Accessibility
+
 
 
 
@@ -66,6 +77,8 @@ KeychainWrapper.default.removeObject(forKey: "key.to.be.deleted")
 
 ## Release History
 
+- 1.0
+  * Initial release
 
 ## License
 
