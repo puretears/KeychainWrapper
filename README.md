@@ -13,6 +13,9 @@
 <a href="https://codebeat.co/projects/github-com-puretears-keychainwrapper-master">
 <img alt="codebeat badge" src="https://codebeat.co/badges/b28efd16-4690-410c-8497-b985e2490bcc" />
 </a>
+<a href="https://github.com/Carthage/Carthage/">
+<img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat">
+</a>
 </p>
 
 KeychainWrapper is a light weight swift wrapper for iOS keychain. Makes accessing keychain is exetremely simple as `UserDefaults`. It is motivated by creating the app of [boxueio.com](https://boxueio.com).
@@ -23,6 +26,7 @@ KeychainWrapper is a light weight swift wrapper for iOS keychain. Makes accessin
 - [x] Simple interface.
 - [x] Support access group.
 - [x] Support accessibility.
+- [x] Updated to Swift 5.
 
 ### KeychainWrapper 101
 
