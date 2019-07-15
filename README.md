@@ -58,18 +58,44 @@ KeychainWrapper.default.removeObject(forKey: "key.to.be.deleted")
 
 ## Customization
 
-### Default values
+### Specify service name
 
+When you use the `default` KeychainWrapper object, all keys are linked to your main bundle identifier as the service name. Howerver, you could change it as follows:
 
+```swift
+let serviceName = "Custom.Service.Name"
+let myWrapper = KeychainWrapper(serviceName: serviceName)
+```
 
-### Service name and access group
+### Specify access group
 
+You may also share keychain items by a customized access group:
 
+```swift
+let serviceName = "Custom.Service.Name"
+let accessGroup = "Shared.Access.Group"
+let myWrapper = KeychainWrapper(serviceName: serviceName, accessGroup: accessGroup)
+```
+
+The `default` KeyChainWrapper object do not share any keychain item and its `accessGroup` is `nil`.
 
 ### Accessibility
 
+By default, all items saved by `KeychainWrapper` can only be access when the device is unlocked. The `enum KeychainItemAccessibility` gives you a customization point to specify another accessibility level.
 
+```swift
+KeychainWrapper.default.set(1, forKey: "key.int.value", withAccessibility: .afterFirstUnlock)
+```
 
+> The `kSecAttrAccessibleAlways` and `kSecAttrAccessibleAlwaysThisDeviceOnly` are deprecated by iOS 12.0. So we do not include them in `KeychainItemAccessibility`.
+
+## Installation
+
+To integrate KeychainWrapper into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), speicify the following line in your `Cartfile`:
+
+```shell
+github "puretears/KeychainWrapper" ~> 1.0
+```
 
 ## Requirements
 
@@ -78,6 +104,10 @@ KeychainWrapper.default.removeObject(forKey: "key.to.be.deleted")
 
 ## Next Steps
 
+- Cocoapods and SPM support;
+- mac OS support;
+- iCloud sharing support;
+- More detailed granularity of exception heirarchy, instead of using just `false` or `nil` to indicate errors.
 
 ## Release History
 
