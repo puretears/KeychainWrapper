@@ -14,3 +14,23 @@
 <img alt="codebeat badge" src="https://codebeat.co/badges/b28efd16-4690-410c-8497-b985e2490bcc" />
 </a>
 </p>
+
+KeychainWrapper is a light weight swift wrapper for iOS keychain. Makes accessing keychain is exetremely simple as `UserDefaults`.
+
+### KeychainWrapper 101
+
+The simplest use case is using the `default` singleton. Then save and load data as the way of manipulating `UserDefaults`.
+
+```swift
+/// Save data
+KeychainWrapper.default.set(1, forKey: "key.int.value")
+KeychainWrapper.default.set([1, 2, 3], forKey: "key.array.value")
+KeychainWrapper.default.set("string value", forKey: "key.string.value")
+
+/// Load data
+KeychainWrapper.default.object(of: Int.self, forKey: "key.int.value")
+KeychainWrapper.default.object(of: Array.self, forKey: "key.array.value")
+KeychainWrapper.default.string(forKey: "key.string.value")
+```
+
+All `set` methods return `Bool` to indicate if the data was saved successfully. All getter methods return `T?`, if the data corresponding to `forKey` cannot decoded back to `T`, it returns `nil`.
