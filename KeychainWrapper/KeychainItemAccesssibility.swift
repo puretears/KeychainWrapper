@@ -13,25 +13,13 @@ protocol KeychainAttrReprentable {
 }
 
 public enum KeychainItemAccessibility {
-  @available(iOS 4, *)
   case afterFirstUnlock
-  
-  @available(iOS 4, *)
   case afterFirstUnlockThisDeviceOnly
-  
-  ///`case always` was deprecated in iOS 12.0
-  
-  @available(iOS 8, *)
   case whenPasscodeSetThisDeviceOnly
-  
-  /// `case alwaysThisDeviceOnly` was deprecated in iOS 12.0
-  
-  /// The default case.
-  @available(iOS 4, *)
-  case whenUnlocked
-  
-  @available(iOS 4, *)
+  case whenUnlocked // The default case.
   case whenUnlockedThisDeviceOnly
+  
+  /// `always and alwaysThisDeviceOnly` are deprecated in iOS 12.0
   
   /// CFString -> KeychainItemAccessibility
   static func accessbilityForAttributeValue(_ keychainAttrValue: CFString) -> KeychainItemAccessibility? {
