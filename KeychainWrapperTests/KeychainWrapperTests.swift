@@ -14,6 +14,8 @@ class KeychainWrapperTests: XCTestCase {
   let stringKey = "testSetString.keychain.wrapper"
   let intValue = 11
   let intKey = "testSetInt.keychain.wrapper"
+  let decimalValue = 3.14
+  let decimalKey = "testReadDecimal.keychain.wrapper"
   let arrayValue = [1, 2, 3, 4]
   let arrayKey = "testSetArray.keychain.wrapper"
   
@@ -85,6 +87,15 @@ class KeychainWrapperTests: XCTestCase {
     let four = kcWrapper.object(of: Int.self, forKey: intKey)
     
     XCTAssert(four == 4, "Update value of: \(4) for key: \(intKey) failed.")
+  }
+  
+  func testReadDecimal() {
+    kcWrapper.set(decimalValue, forKey: decimalKey)
+    let result = kcWrapper.object(of: Double.self, forKey: decimalKey)
+    
+    if result != decimalValue {
+      XCTFail("Fetch the wrong floating point number of key:\(decimalKey).\n\(decimalValue) is expected.")
+    }
   }
   
   // Test setting and reading Array (a type conforms to Codable only)
