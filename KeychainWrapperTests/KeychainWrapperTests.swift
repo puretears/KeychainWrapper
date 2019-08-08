@@ -18,7 +18,6 @@ class KeychainWrapperTests: XCTestCase {
   let decimalKey = "testReadDecimal.keychain.wrapper"
   let arrayValue = [1, 2, 3, 4]
   let arrayKey = "testSetArray.keychain.wrapper"
-  
   var kcWrapper: KeychainWrapper!
   
   override func setUp() {
@@ -81,12 +80,19 @@ class KeychainWrapperTests: XCTestCase {
     XCTAssertEqual(result, nil)
   }
   
-  func testUpdateExistingInt() {
+  func testUpdateInt() {
     kcWrapper.set(intValue, forKey: intKey)
     kcWrapper.set(4, forKey: intKey)
     let four = kcWrapper.object(of: Int.self, forKey: intKey)
     
     XCTAssert(four == 4, "Update value of: \(4) for key: \(intKey) failed.")
+  }
+  
+  func testSetDecimal() {
+    guard kcWrapper.set(decimalValue, forKey: decimalKey) else {
+      XCTFail("Set value of: \(decimalValue) for key: \(decimalKey) failed.")
+      return
+    }
   }
   
   func testReadDecimal() {

@@ -101,11 +101,13 @@ open class KeychainWrapper {
     
     var keys = Set<String>()
     
-    if let results = results as? [[AnyHashable: Any]] {
-      for attributes in results {
-        if let accountData = attributes[secAttrAccount] as? Data,
+    if let results = results as? [[String: AnyObject]] {
+      
+      keys = results.reduce(into: Set<String>()) {
+        (result: inout Set<String>, attr: [String: AnyObject]) in
+        if let accountData = attr[secAttrAccount] as? Data,
           let key = String(data: accountData, encoding: .utf8) {
-          keys.insert(key)
+          result.insert(key)
         }
       }
     }
@@ -177,7 +179,7 @@ open class KeychainWrapper {
     // Limit result to 1
     queryDictionary[secMatchLimit] = kSecMatchLimitOne
     
-    // Specify we want persistant data reference
+    // Specify we want data only
     queryDictionary[secReturnData] = kCFBooleanTrue
     
     // Search
