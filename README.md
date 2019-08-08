@@ -97,6 +97,17 @@ To integrate KeychainWrapper into your Xcode project using [Carthage](https://gi
 github "puretears/KeychainWrapper" ~> 1.0
 ```
 
+## Video sessions
+
+We also recorded some videos talking about keychain basic and `KeychainWrapper` implementation details (Chinese 🇨🇳, Subscription needed).
+
+1. [Keychain basics](https://boxueio.com/series/build-boxue-app-in-mvvm/episode/582)
+2. [Keychain implementation - I](https://boxueio.com/series/build-boxue-app-in-mvvm/episode/583)
+3. [Keychain implementation - II](https://boxueio.com/series/build-boxue-app-in-mvvm/episode/584)
+4. [Orgnize test cases for KeychainWrapper](https://boxueio.com/series/build-boxue-app-in-mvvm/episode/585)
+5. [Keychain implementation - III](https://boxueio.com/series/build-boxue-app-in-mvvm/episode/586)
+6. [Decorate your README.md](https://boxueio.com/series/build-boxue-app-in-mvvm/episode/587)
+
 ## Requirements
 
 - iOS 10.0+
