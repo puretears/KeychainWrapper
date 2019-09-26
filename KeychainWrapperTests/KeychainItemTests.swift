@@ -40,15 +40,5 @@ class KeychainItemTests: XCTestCase {
     demo.value = 1010
     valueInKC = KeychainWrapper.default.object(of: Int.self, forKey: "int.demo.key")
     XCTAssertEqual(valueInKC, 1010)
-    
-    valueInKC = KeychainWrapper.default.object(of: Int.self, forKey: "general.int.demo.key")
-    XCTAssertEqual(valueInKC, 11)
-  }
-  
-  func testKeychainItemObject() {
-    let demo = Demo()
-    demo.point = Point()
-    
-    
   }
 }
