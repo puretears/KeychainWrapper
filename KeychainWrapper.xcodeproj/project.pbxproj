@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682038012336836300FA7F1A /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682038002336836300FA7F1A /* KeychainItem.swift */; };
+		6820380323370D8800FA7F1A /* KeychainItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6820380223370D8800FA7F1A /* KeychainItemTests.swift */; };
+		682038052337195200FA7F1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEDA1B22D9AD7500CA8AA7 /* SceneDelegate.swift */; };
 		68BEDA1A22D9AD7500CA8AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEDA1922D9AD7500CA8AA7 /* AppDelegate.swift */; };
-		68BEDA1C22D9AD7500CA8AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEDA1B22D9AD7500CA8AA7 /* SceneDelegate.swift */; };
 		68BEDA1E22D9AD7500CA8AA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEDA1D22D9AD7500CA8AA7 /* ViewController.swift */; };
 		68BEDA2122D9AD7500CA8AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68BEDA1F22D9AD7500CA8AA7 /* Main.storyboard */; };
 		68BEDA2322D9AD7700CA8AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68BEDA2222D9AD7700CA8AA7 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		682038002336836300FA7F1A /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		6820380223370D8800FA7F1A /* KeychainItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemTests.swift; sourceTree = "<group>"; };
 		68BEDA1722D9AD7500CA8AA7 /* KeychainWrapperHostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainWrapperHostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BEDA1922D9AD7500CA8AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68BEDA1B22D9AD7500CA8AA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,9 +92,9 @@
 		68BEDA1822D9AD7500CA8AA7 /* KeychainWrapperHostApp */ = {
 			isa = PBXGroup;
 			children = (
+				68BEDA1B22D9AD7500CA8AA7 /* SceneDelegate.swift */,
 				68BEDA2D22D9AD9D00CA8AA7 /* KeychainWrapperHostApp.entitlements */,
 				68BEDA1922D9AD7500CA8AA7 /* AppDelegate.swift */,
-				68BEDA1B22D9AD7500CA8AA7 /* SceneDelegate.swift */,
 				68BEDA1D22D9AD7500CA8AA7 /* ViewController.swift */,
 				68BEDA1F22D9AD7500CA8AA7 /* Main.storyboard */,
 				68BEDA2222D9AD7700CA8AA7 /* Assets.xcassets */,
@@ -128,6 +132,7 @@
 				68D0CD1322D4BC2A00990B69 /* Info.plist */,
 				68D0CD2922D4BC6A00990B69 /* KeychainItemAccesssibility.swift */,
 				68D0CD2B22D4C3E900990B69 /* KeychainWrapper.swift */,
+				682038002336836300FA7F1A /* KeychainItem.swift */,
 			);
 			path = KeychainWrapper;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				68D0CD1D22D4BC2A00990B69 /* KeychainWrapperTests.swift */,
+				6820380223370D8800FA7F1A /* KeychainItemTests.swift */,
 				68D0CD1F22D4BC2A00990B69 /* Info.plist */,
 			);
 			path = KeychainWrapperTests;
@@ -287,7 +293,7 @@
 			files = (
 				68BEDA1E22D9AD7500CA8AA7 /* ViewController.swift in Sources */,
 				68BEDA1A22D9AD7500CA8AA7 /* AppDelegate.swift in Sources */,
-				68BEDA1C22D9AD7500CA8AA7 /* SceneDelegate.swift in Sources */,
+				682038052337195200FA7F1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +303,7 @@
 			files = (
 				68D0CD2A22D4BC6A00990B69 /* KeychainItemAccesssibility.swift in Sources */,
 				68D0CD2C22D4C3E900990B69 /* KeychainWrapper.swift in Sources */,
+				682038012336836300FA7F1A /* KeychainItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6820380323370D8800FA7F1A /* KeychainItemTests.swift in Sources */,
 				68D0CD1E22D4BC2A00990B69 /* KeychainWrapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
