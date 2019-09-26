@@ -17,7 +17,6 @@ import Foundation
 @propertyWrapper
 public struct KeychainStoreString {
   public let key: String
-  public let `default` = KeychainWrapper.default
   
   public init(key: String) {
     self.key = key
@@ -37,7 +36,7 @@ public struct KeychainStoreString {
   
   public var projectedValue: KeychainWrapper {
     get {
-      return self.default
+      return KeychainWrapper.default
     }
   }
 }
@@ -45,7 +44,6 @@ public struct KeychainStoreString {
 @propertyWrapper
 public struct KeychainStoreNumber<T> where T: Numeric, T: Codable {
   public let key: String
-  public let `default` = KeychainWrapper.default
   
   public init(key: String) {
     self.key = key
@@ -65,7 +63,7 @@ public struct KeychainStoreNumber<T> where T: Numeric, T: Codable {
   
   public var projectedValue: KeychainWrapper {
     get {
-      return self.default
+      return KeychainWrapper.default
     }
   }
 }
@@ -73,7 +71,6 @@ public struct KeychainStoreNumber<T> where T: Numeric, T: Codable {
 @propertyWrapper
 public struct KeychainStoreObject<T> where T: Codable {
   public let key: String
-  public let `default` = KeychainWrapper.default
   
   public init(key: String) {
     self.key = key
@@ -93,7 +90,7 @@ public struct KeychainStoreObject<T> where T: Codable {
   
   public var projectedValue: KeychainWrapper {
     get {
-      return self.default
+      return KeychainWrapper.default
     }
   }
 }
