@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -43,7 +43,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68D0CD1722D4BC2A00990B69"
+               BlueprintIdentifier = "D30DF67C238263D2000C4D3A"
                BuildableName = "KeychainWrapperTests.xctest"
                BlueprintName = "KeychainWrapperTests"
                ReferencedContainer = "container:KeychainWrapper.xcodeproj">
