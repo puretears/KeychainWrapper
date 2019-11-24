@@ -36,3 +36,10 @@ Carthage/
 
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+
+.swiftpm

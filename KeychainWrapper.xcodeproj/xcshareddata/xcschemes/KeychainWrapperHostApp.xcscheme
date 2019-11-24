@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68D0CD3122D74DD600990B69"
+               BlueprintIdentifier = "68BEDA1622D9AD7500CA8AA7"
                BuildableName = "KeychainWrapperHostApp.app"
                BlueprintName = "KeychainWrapperHostApp"
                ReferencedContainer = "container:KeychainWrapper.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68D0CD3122D74DD600990B69"
+            BlueprintIdentifier = "68BEDA1622D9AD7500CA8AA7"
             BuildableName = "KeychainWrapperHostApp.app"
             BlueprintName = "KeychainWrapperHostApp"
             ReferencedContainer = "container:KeychainWrapper.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68D0CD3122D74DD600990B69"
+            BlueprintIdentifier = "68BEDA1622D9AD7500CA8AA7"
             BuildableName = "KeychainWrapperHostApp.app"
             BlueprintName = "KeychainWrapperHostApp"
             ReferencedContainer = "container:KeychainWrapper.xcodeproj">
