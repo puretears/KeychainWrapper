@@ -23,9 +23,10 @@ class Demo {
 }
 
 class KeychainItemTests: XCTestCase {
-  let demo = Demo()
+  var demo: Demo!
   
   override func setUp() {
+    demo = Demo()
   }
 
   override func tearDown() {
